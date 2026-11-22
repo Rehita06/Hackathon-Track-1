@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#0b5563">
+<title>Yojana Saathi</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="top">
+  <div class="top-in">
+    <div class="brand"><span class="mark" aria-hidden="true">योजना</span><span class="name">Yojana Saathi</span></div>
+    <div class="langs" id="langs" role="group" aria-label="Language"></div>
+  </div>
+</header>
+<main>
+  <section class="hero">
+    <h1 id="tagline"></h1>
+    <p class="sub" id="sub"></p>
+    <p class="mode" id="modeBadge"></p>
+  </section>
+  <nav class="tabs" role="tablist">
+    <button role="tab" data-tab="find" aria-selected="true" id="tab_find"></button>
+    <button role="tab" data-tab="ask" aria-selected="false" id="tab_ask"></button>
+    <button role="tab" data-tab="explain" aria-selected="false" id="tab_explain"></button>
+  </nav>
+
+  <section id="panel-find" class="panel">
+    <form id="profileForm" onsubmit="return false"></form>
+    <div class="actions"><button id="findBtn" class="primary big"></button><button id="resetBtn" class="ghost"></button></div>
+    <div id="stats" class="stats" aria-live="polite"></div>
+    <div id="results" class="results"></div>
+  </section>
+
+  <section id="panel-ask" class="panel" hidden>
+    <p class="hint" id="askHint"></p>
+    <div class="askbar">
+      <input id="q" type="text" maxlength="400" autocomplete="off">
+      <button id="micBtn" class="icon" type="button" aria-label="Speak"><svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><path fill="currentColor" d="M12 15a3 3 0 0 0 3-3V6a3 3 0 0 0-6 0v6a3 3 0 0 0 3 3zm5-3a5 5 0 0 1-10 0H5a7 7 0 0 0 6 6.9V22h2v-3.1A7 7 0 0 0 19 12z"/></svg></button>
+      <button id="askBtn" class="primary"></button>
+    </div>
+    <div class="chips" id="chips"></div>
+    <div id="chat"></div>
+  </section>
+
+  <section id="panel-explain" class="panel" hidden>
+    <div class="split">
+      <div>
+        <textarea id="notice" rows="12"></textarea>
+        <div class="actions"><button id="explainBtn" class="primary"></button><button id="sampleBtn" class="ghost"></button></div>
+      </div>
+      <div id="explainOut"></div>
+    </div>
+  </section>
+</main>
+<footer><p id="disclaimer"></p></footer>
+<script src="i18n.js"></script>
+<script src="app.js"></script>
+</body>
+</html>

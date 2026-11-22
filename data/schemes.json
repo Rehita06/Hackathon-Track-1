@@ -1,0 +1,656 @@
+[
+ {
+  "id": "pm-kisan",
+  "name": "PM-KISAN Samman Nidhi",
+  "name_hi": "पीएम-किसान सम्मान निधि",
+  "category": "Agriculture",
+  "benefit_en": "Rs 6,000 per year in three instalments of Rs 2,000, paid directly to the farmer's bank account.",
+  "benefit_hi": "किसान के बैंक खाते में सीधे प्रति वर्ष 6,000 रुपये (2,000 रुपये की तीन किस्तों में)।",
+  "summary_en": "Income support for landholding farmer families. Money goes straight to the bank account through Direct Benefit Transfer.",
+  "summary_hi": "भूमि वाले किसान परिवारों के लिए आय सहायता। पैसा सीधे बैंक खाते में आता है।",
+  "rules": [
+   {
+    "f": "owns_land",
+    "op": "true",
+    "en": "Family owns cultivable land",
+    "hi": "परिवार के पास खेती योग्य भूमि है"
+   },
+   {
+    "f": "it_payer",
+    "op": "false",
+    "en": "Does not pay income tax",
+    "hi": "आयकर नहीं देते"
+   },
+   {
+    "f": "govt_employee",
+    "op": "false",
+    "en": "Not a serving/retired government employee (higher posts)",
+    "hi": "सरकारी कर्मचारी/पेंशनभोगी (उच्च पद) नहीं हैं"
+   }
+  ],
+  "docs": [
+   "Aadhaar",
+   "Bank passbook",
+   "Land ownership record"
+  ],
+  "apply_en": "Register at the PM-KISAN portal or through a Common Service Centre (CSC) or your village agriculture officer. Complete e-KYC.",
+  "portal": "https://pmkisan.gov.in",
+  "tags": [
+   "farmer",
+   "kisan",
+   "farming",
+   "land",
+   "agriculture",
+   "किसान",
+   "खेती",
+   "ರೈತ",
+   "விவசாயி",
+   "రైతు"
+  ]
+ },
+ {
+  "id": "pm-jay",
+  "name": "Ayushman Bharat PM-JAY",
+  "name_hi": "आयुष्मान भारत पीएम-जेएवाई",
+  "category": "Health",
+  "benefit_en": "Health cover up to Rs 5 lakh per family per year for hospital treatment at empanelled hospitals. Senior citizens aged 70+ are covered irrespective of income.",
+  "benefit_hi": "सूचीबद्ध अस्पतालों में इलाज के लिए प्रति परिवार प्रति वर्ष 5 लाख रुपये तक का स्वास्थ्य बीमा। 70+ आयु के वरिष्ठ नागरिक आय की परवाह किए बिना पात्र।",
+  "summary_en": "Free cashless hospital cover for poor and vulnerable families and for all citizens aged 70 and above.",
+  "summary_hi": "गरीब व कमजोर परिवारों और 70 वर्ष से अधिक सभी नागरिकों के लिए कैशलेस अस्पताल बीमा।",
+  "rules": [
+   {
+    "any": [
+     {
+      "f": "age",
+      "op": "gte",
+      "v": 70
+     },
+     {
+      "f": "bpl",
+      "op": "true"
+     },
+     {
+      "f": "income",
+      "op": "lte",
+      "v": 100000
+     }
+    ],
+    "en": "Aged 70+, OR a poor/deprived household (indicative: low income or BPL)",
+    "hi": "आयु 70+ हो, या गरीब/वंचित परिवार (संकेतक: कम आय या बीपीएल)"
+   }
+  ],
+  "docs": [
+   "Aadhaar",
+   "Ration card",
+   "Mobile number"
+  ],
+  "apply_en": "Check your name on the PM-JAY portal or at an Ayushman Mitra desk in an empanelled hospital, then get your Ayushman card made.",
+  "portal": "https://pmjay.gov.in",
+  "tags": [
+   "health",
+   "hospital",
+   "insurance",
+   "medical",
+   "senior",
+   "स्वास्थ्य",
+   "अस्पताल",
+   "बीमा",
+   "ಆರೋಗ್ಯ",
+   "மருத்துவ",
+   "ఆరోగ్య"
+  ]
+ },
+ {
+  "id": "pm-ujjwala",
+  "name": "PM Ujjwala Yojana",
+  "name_hi": "प्रधानमंत्री उज्ज्वला योजना",
+  "category": "Women & Energy",
+  "benefit_en": "Free LPG connection for adult women of poor households, with support for the first refill and stove.",
+  "benefit_hi": "गरीब परिवारों की वयस्क महिलाओं को मुफ्त एलपीजी कनेक्शन।",
+  "summary_en": "Clean cooking fuel connection in the name of a woman of a poor household that has no LPG connection.",
+  "summary_hi": "जिस गरीब परिवार में एलपीजी कनेक्शन नहीं है, वहाँ महिला के नाम पर मुफ्त कनेक्शन।",
+  "rules": [
+   {
+    "f": "gender",
+    "op": "eq",
+    "v": "female",
+    "en": "Applicant is a woman",
+    "hi": "आवेदक महिला है"
+   },
+   {
+    "f": "age",
+    "op": "gte",
+    "v": 18,
+    "en": "Age 18 or above",
+    "hi": "आयु 18 वर्ष या अधिक"
+   },
+   {
+    "f": "bpl",
+    "op": "true",
+    "en": "Belongs to a poor (BPL) household",
+    "hi": "गरीब (बीपीएल) परिवार से हैं"
+   },
+   {
+    "f": "has_lpg",
+    "op": "false",
+    "en": "No existing LPG connection in the household",
+    "hi": "घर में पहले से एलपीजी कनेक्शन नहीं है"
+   }
+  ],
+  "docs": [
+   "Aadhaar",
+   "BPL/ration card",
+   "Bank passbook",
+   "Passport photo"
+  ],
+  "apply_en": "Apply at the nearest LPG distributor or on the PMUY portal with KYC documents.",
+  "portal": "https://www.pmuy.gov.in",
+  "tags": [
+   "lpg",
+   "gas",
+   "cooking",
+   "women",
+   "woman",
+   "उज्ज्वला",
+   "गैस",
+   "महिला",
+   "ಗ್ಯಾಸ್",
+   "எரிவாயு",
+   "గ్యాస్"
+  ]
+ },
+ {
+  "id": "apy",
+  "name": "Atal Pension Yojana",
+  "name_hi": "अटल पेंशन योजना",
+  "category": "Pension",
+  "benefit_en": "Guaranteed monthly pension of Rs 1,000 to Rs 5,000 after age 60, depending on your monthly contribution.",
+  "benefit_hi": "आपके अंशदान के अनुसार 60 वर्ष के बाद 1,000 से 5,000 रुपये मासिक गारंटीशुदा पेंशन।",
+  "summary_en": "Voluntary pension scheme for workers in the unorganised sector. Join between 18 and 40 years of age.",
+  "summary_hi": "असंगठित क्षेत्र के कामगारों के लिए स्वैच्छिक पेंशन योजना। 18 से 40 वर्ष में जुड़ें।",
+  "rules": [
+   {
+    "f": "age",
+    "op": "gte",
+    "v": 18,
+    "en": "Age 18 or above",
+    "hi": "आयु 18 वर्ष या अधिक"
+   },
+   {
+    "f": "age",
+    "op": "lte",
+    "v": 40,
+    "en": "Age 40 or below",
+    "hi": "आयु 40 वर्ष या कम"
+   },
+   {
+    "f": "bank_account",
+    "op": "true",
+    "en": "Has a savings bank account",
+    "hi": "बचत बैंक खाता है"
+   },
+   {
+    "f": "it_payer",
+    "op": "false",
+    "en": "Not an income tax payer",
+    "hi": "आयकरदाता नहीं हैं"
+   }
+  ],
+  "docs": [
+   "Aadhaar",
+   "Bank account",
+   "Mobile number"
+  ],
+  "apply_en": "Visit your bank branch or use net banking and enable auto-debit for the monthly contribution.",
+  "portal": "https://www.npscra.nsdl.co.in",
+  "tags": [
+   "pension",
+   "retirement",
+   "old age",
+   "unorganised",
+   "पेंशन",
+   "बुढ़ापा",
+   "ಪಿಂಚಣಿ",
+   "ஓய்வூதியம்",
+   "పెన్షన్"
+  ]
+ },
+ {
+  "id": "pmjjby",
+  "name": "PM Jeevan Jyoti Bima Yojana",
+  "name_hi": "प्रधानमंत्री जीवन ज्योति बीमा योजना",
+  "category": "Insurance",
+  "benefit_en": "Life cover of Rs 2 lakh for a premium of Rs 436 per year, auto-debited from your bank account.",
+  "benefit_hi": "436 रुपये वार्षिक प्रीमियम पर 2 लाख रुपये का जीवन बीमा।",
+  "summary_en": "Low-cost term life insurance for people with a bank account, aged 18 to 50.",
+  "summary_hi": "बैंक खाताधारकों (18-50 वर्ष) के लिए सस्ता जीवन बीमा।",
+  "rules": [
+   {
+    "f": "age",
+    "op": "gte",
+    "v": 18,
+    "en": "Age 18 or above",
+    "hi": "आयु 18 वर्ष या अधिक"
+   },
+   {
+    "f": "age",
+    "op": "lte",
+    "v": 50,
+    "en": "Age 50 or below",
+    "hi": "आयु 50 वर्ष या कम"
+   },
+   {
+    "f": "bank_account",
+    "op": "true",
+    "en": "Has a bank account",
+    "hi": "बैंक खाता है"
+   }
+  ],
+  "docs": [
+   "Aadhaar",
+   "Bank account"
+  ],
+  "apply_en": "Enrol at your bank branch, net banking or a banking correspondent before the annual renewal period.",
+  "portal": "https://jansuraksha.gov.in",
+  "tags": [
+   "insurance",
+   "life",
+   "death",
+   "bima",
+   "बीमा",
+   "जीवन",
+   "ವಿಮೆ",
+   "காப்பீடு",
+   "బీమా"
+  ]
+ },
+ {
+  "id": "pmsby",
+  "name": "PM Suraksha Bima Yojana",
+  "name_hi": "प्रधानमंत्री सुरक्षा बीमा योजना",
+  "category": "Insurance",
+  "benefit_en": "Accident insurance of Rs 2 lakh for death or full disability (Rs 1 lakh for partial disability) at Rs 20 per year.",
+  "benefit_hi": "20 रुपये वार्षिक प्रीमियम पर दुर्घटना बीमा: मृत्यु/पूर्ण विकलांगता पर 2 लाख रुपये।",
+  "summary_en": "Very low-cost accident insurance for bank account holders aged 18 to 70.",
+  "summary_hi": "18-70 वर्ष के बैंक खाताधारकों के लिए बहुत सस्ता दुर्घटना बीमा।",
+  "rules": [
+   {
+    "f": "age",
+    "op": "gte",
+    "v": 18,
+    "en": "Age 18 or above",
+    "hi": "आयु 18 वर्ष या अधिक"
+   },
+   {
+    "f": "age",
+    "op": "lte",
+    "v": 70,
+    "en": "Age 70 or below",
+    "hi": "आयु 70 वर्ष या कम"
+   },
+   {
+    "f": "bank_account",
+    "op": "true",
+    "en": "Has a bank account",
+    "hi": "बैंक खाता है"
+   }
+  ],
+  "docs": [
+   "Aadhaar",
+   "Bank account"
+  ],
+  "apply_en": "Enrol at your bank branch or via net banking; the premium is auto-debited once a year.",
+  "portal": "https://jansuraksha.gov.in",
+  "tags": [
+   "accident",
+   "insurance",
+   "disability",
+   "दुर्घटना",
+   "बीमा",
+   "ಅಪಘಾತ",
+   "விபத்து",
+   "ప్రమాద"
+  ]
+ },
+ {
+  "id": "ssy",
+  "name": "Sukanya Samriddhi Yojana",
+  "name_hi": "सुकन्या समृद्धि योजना",
+  "category": "Girl Child",
+  "benefit_en": "High-interest savings account for a girl child's education and marriage expenses, with tax benefits.",
+  "benefit_hi": "बालिका की शिक्षा व विवाह के लिए अधिक ब्याज वाला बचत खाता, कर लाभ सहित।",
+  "summary_en": "A parent or guardian can open an account for a girl child below 10 years of age at a post office or bank. Interest rate is set by the government each quarter.",
+  "summary_hi": "10 वर्ष से कम उम्र की बालिका के लिए माता-पिता/अभिभावक डाकघर या बैंक में खाता खोल सकते हैं।",
+  "rules": [
+   {
+    "f": "girl_child_under10",
+    "op": "true",
+    "en": "Has a girl child below 10 years",
+    "hi": "10 वर्ष से कम उम्र की बेटी है"
+   }
+  ],
+  "docs": [
+   "Girl's birth certificate",
+   "Parent/guardian Aadhaar and address proof"
+  ],
+  "apply_en": "Open the account at any post office or authorised bank with the girl's birth certificate.",
+  "portal": "https://www.indiapost.gov.in",
+  "tags": [
+   "girl",
+   "daughter",
+   "beti",
+   "savings",
+   "education",
+   "बेटी",
+   "बालिका",
+   "सुकन्या",
+   "ಹೆಣ್ಣು ಮಗು",
+   "பெண் குழந்தை",
+   "ఆడపిల్ల"
+  ]
+ },
+ {
+  "id": "mgnrega",
+  "name": "MGNREGA",
+  "name_hi": "मनरेगा",
+  "category": "Employment",
+  "benefit_en": "Legal right to 100 days of wage employment per rural household per year for unskilled manual work, at the notified state wage.",
+  "benefit_hi": "ग्रामीण परिवार को प्रति वर्ष 100 दिन अकुशल मजदूरी रोजगार का कानूनी अधिकार।",
+  "summary_en": "Adult members of rural households who want unskilled work can get a job card and demand work from the Gram Panchayat. If work is not given in 15 days, an unemployment allowance is due.",
+  "summary_hi": "ग्रामीण परिवार के वयस्क सदस्य जॉब कार्ड बनवाकर ग्राम पंचायत से काम मांग सकते हैं। 15 दिन में काम न मिले तो बेरोजगारी भत्ता मिलता है।",
+  "rules": [
+   {
+    "f": "area",
+    "op": "eq",
+    "v": "rural",
+    "en": "Lives in a rural area",
+    "hi": "ग्रामीण क्षेत्र में रहते हैं"
+   },
+   {
+    "f": "age",
+    "op": "gte",
+    "v": 18,
+    "en": "Age 18 or above",
+    "hi": "आयु 18 वर्ष या अधिक"
+   }
+  ],
+  "docs": [
+   "Aadhaar",
+   "Passport photo",
+   "Bank/post office account"
+  ],
+  "apply_en": "Apply in writing to the Gram Panchayat for a Job Card, then submit a work demand application.",
+  "portal": "https://nrega.nic.in",
+  "tags": [
+   "job",
+   "work",
+   "employment",
+   "wage",
+   "labour",
+   "रोजगार",
+   "मजदूरी",
+   "काम",
+   "ಉದ್ಯೋಗ",
+   "வேலை",
+   "ఉపాధి"
+  ]
+ },
+ {
+  "id": "mudra",
+  "name": "PM MUDRA Yojana",
+  "name_hi": "प्रधानमंत्री मुद्रा योजना",
+  "category": "Business Loan",
+  "benefit_en": "Collateral-free loans for small non-farm businesses in tiers (Shishu up to Rs 50,000, Kishor up to Rs 5 lakh, Tarun up to Rs 10 lakh). Limits have been revised over time, so check the latest with your bank.",
+  "benefit_hi": "छोटे गैर-कृषि व्यवसायों के लिए बिना गारंटी ऋण (शिशु 50,000, किशोर 5 लाख, तरुण 10 लाख रुपये तक)। सीमा बदलती रहती है, नवीनतम बैंक से पूछें।",
+  "summary_en": "Loans from banks, NBFCs and MFIs for micro and small enterprises such as shops, services, food units and small manufacturing.",
+  "summary_hi": "दुकान, सेवा, खाद्य इकाई और छोटे विनिर्माण जैसे सूक्ष्म उद्यमों के लिए ऋण।",
+  "rules": [
+   {
+    "f": "age",
+    "op": "gte",
+    "v": 18,
+    "en": "Age 18 or above",
+    "hi": "आयु 18 वर्ष या अधिक"
+   },
+   {
+    "f": "occupation",
+    "op": "in",
+    "v": [
+     "self_employed",
+     "unemployed",
+     "homemaker"
+    ],
+    "en": "Running or planning a small non-farm business",
+    "hi": "छोटा गैर-कृषि व्यवसाय चला रहे हैं या शुरू करना चाहते हैं"
+   }
+  ],
+  "docs": [
+   "Aadhaar",
+   "PAN",
+   "Business plan or proof of business",
+   "Address proof",
+   "Bank statements"
+  ],
+  "apply_en": "Apply at any bank, NBFC or MFI, or through the Udyamimitra portal.",
+  "portal": "https://www.mudra.org.in",
+  "tags": [
+   "loan",
+   "business",
+   "shop",
+   "startup",
+   "entrepreneur",
+   "लोन",
+   "ऋण",
+   "व्यवसाय",
+   "ಸಾಲ",
+   "கடன்",
+   "రుణం"
+  ]
+ },
+ {
+  "id": "post-matric-sc",
+  "name": "Post Matric Scholarship for SC Students",
+  "name_hi": "अनुसूचित जाति छात्रों के लिए पोस्ट मैट्रिक छात्रवृत्ति",
+  "category": "Education",
+  "benefit_en": "Covers tuition and non-refundable fees plus a maintenance allowance for post-matric courses.",
+  "benefit_hi": "मैट्रिक के बाद की पढ़ाई के लिए ट्यूशन/शुल्क और रखरखाव भत्ता।",
+  "summary_en": "Scholarship for Scheduled Caste students studying after Class 10, if the family income is within the limit.",
+  "summary_hi": "कक्षा 10 के बाद पढ़ रहे अनुसूचित जाति के छात्रों के लिए, यदि पारिवारिक आय सीमा के भीतर हो।",
+  "rules": [
+   {
+    "f": "category",
+    "op": "eq",
+    "v": "SC",
+    "en": "Belongs to Scheduled Caste (SC)",
+    "hi": "अनुसूचित जाति (SC) से हैं"
+   },
+   {
+    "f": "student",
+    "op": "true",
+    "en": "Currently a student after Class 10",
+    "hi": "कक्षा 10 के बाद पढ़ रहे हैं"
+   },
+   {
+    "f": "income",
+    "op": "lte",
+    "v": 250000,
+    "en": "Family income up to Rs 2.5 lakh per year",
+    "hi": "पारिवारिक आय 2.5 लाख रुपये/वर्ष तक"
+   }
+  ],
+  "docs": [
+   "Caste certificate",
+   "Income certificate",
+   "Marksheets",
+   "Aadhaar",
+   "Bank passbook",
+   "Admission proof"
+  ],
+  "apply_en": "Apply on the National Scholarship Portal (NSP) or your state scholarship portal during the open window and get it verified by your institution.",
+  "portal": "https://scholarships.gov.in",
+  "tags": [
+   "scholarship",
+   "student",
+   "college",
+   "education",
+   "fees",
+   "छात्रवृत्ति",
+   "पढ़ाई",
+   "ವಿದ್ಯಾರ್ಥಿವೇತನ",
+   "உதவித்தொகை",
+   "స్కాలర్‌షిప్"
+  ]
+ },
+ {
+  "id": "standup",
+  "name": "Stand-Up India",
+  "name_hi": "स्टैंड-अप इंडिया",
+  "category": "Business Loan",
+  "benefit_en": "Bank loan between Rs 10 lakh and Rs 1 crore for a new (greenfield) enterprise in manufacturing, services, trading or allied agriculture.",
+  "benefit_hi": "विनिर्माण, सेवा, व्यापार या कृषि-संबंधित नए उद्यम के लिए 10 लाख से 1 करोड़ रुपये तक बैंक ऋण।",
+  "summary_en": "Supports Scheduled Caste, Scheduled Tribe and women entrepreneurs to set up a first-time enterprise.",
+  "summary_hi": "अनुसूचित जाति, जनजाति और महिला उद्यमियों को पहला उद्यम शुरू करने में सहायता।",
+  "rules": [
+   {
+    "f": "age",
+    "op": "gte",
+    "v": 18,
+    "en": "Age 18 or above",
+    "hi": "आयु 18 वर्ष या अधिक"
+   },
+   {
+    "any": [
+     {
+      "f": "category",
+      "op": "in",
+      "v": [
+       "SC",
+       "ST"
+      ]
+     },
+     {
+      "f": "gender",
+      "op": "eq",
+      "v": "female"
+     }
+    ],
+    "en": "SC/ST entrepreneur or a woman entrepreneur",
+    "hi": "एससी/एसटी उद्यमी या महिला उद्यमी"
+   }
+  ],
+  "docs": [
+   "Aadhaar",
+   "PAN",
+   "Caste certificate (if SC/ST)",
+   "Project report",
+   "Address proof"
+  ],
+  "apply_en": "Apply through the Stand-Up Mitra portal, a bank branch or the Lead District Manager.",
+  "portal": "https://www.standupmitra.in",
+  "tags": [
+   "women",
+   "entrepreneur",
+   "business",
+   "loan",
+   "startup",
+   "उद्यमी",
+   "महिला",
+   "ಉದ್ಯಮ",
+   "தொழில்",
+   "వ్యాపార"
+  ]
+ },
+ {
+  "id": "pmay-g",
+  "name": "PM Awas Yojana - Gramin",
+  "name_hi": "प्रधानमंत्री आवास योजना - ग्रामीण",
+  "category": "Housing",
+  "benefit_en": "Financial assistance to build a pucca house with basic amenities for eligible rural households without proper housing.",
+  "benefit_hi": "बिना पक्के मकान वाले पात्र ग्रामीण परिवारों को पक्का घर बनाने के लिए आर्थिक सहायता।",
+  "summary_en": "Rural households that are homeless or live in kutcha/dilapidated houses can be selected from the permanent wait list.",
+  "summary_hi": "बेघर या कच्चे/जीर्ण मकान में रहने वाले ग्रामीण परिवार स्थायी प्रतीक्षा सूची से चुने जाते हैं।",
+  "rules": [
+   {
+    "f": "area",
+    "op": "eq",
+    "v": "rural",
+    "en": "Lives in a rural area",
+    "hi": "ग्रामीण क्षेत्र में रहते हैं"
+   },
+   {
+    "f": "pucca_house",
+    "op": "false",
+    "en": "Does not own a pucca house",
+    "hi": "पक्का मकान नहीं है"
+   }
+  ],
+  "docs": [
+   "Aadhaar",
+   "Bank passbook",
+   "Job card (if available)"
+  ],
+  "apply_en": "Check the Awaas+ / PMAY-G beneficiary list; contact your Gram Panchayat or Block Development Office.",
+  "portal": "https://pmayg.nic.in",
+  "tags": [
+   "house",
+   "home",
+   "housing",
+   "shelter",
+   "आवास",
+   "घर",
+   "मकान",
+   "ಮನೆ",
+   "வீடு",
+   "ఇల్లు"
+  ]
+ },
+ {
+  "id": "ignoaps",
+  "name": "Indira Gandhi National Old Age Pension (NSAP)",
+  "name_hi": "इंदिरा गांधी राष्ट्रीय वृद्धावस्था पेंशन (एनएसएपी)",
+  "category": "Pension",
+  "benefit_en": "Monthly pension for poor senior citizens from the central government; many states add their own top-up.",
+  "benefit_hi": "गरीब वरिष्ठ नागरिकों को केंद्र सरकार से मासिक पेंशन; कई राज्य अतिरिक्त राशि जोड़ते हैं।",
+  "summary_en": "Old-age pension for senior citizens (60+) living below the poverty line. Amounts and age rules vary by state.",
+  "summary_hi": "गरीबी रेखा से नीचे के 60+ वरिष्ठ नागरिकों के लिए पेंशन। राशि और आयु नियम राज्य के अनुसार भिन्न।",
+  "rules": [
+   {
+    "f": "age",
+    "op": "gte",
+    "v": 60,
+    "en": "Age 60 or above",
+    "hi": "आयु 60 वर्ष या अधिक"
+   },
+   {
+    "f": "bpl",
+    "op": "true",
+    "en": "Belongs to a poor (BPL) household",
+    "hi": "गरीब (बीपीएल) परिवार से हैं"
+   }
+  ],
+  "docs": [
+   "Aadhaar",
+   "Age proof",
+   "BPL certificate",
+   "Bank passbook"
+  ],
+  "apply_en": "Apply through your Gram Panchayat, municipal office or state social welfare department.",
+  "portal": "https://nsap.nic.in",
+  "tags": [
+   "old age",
+   "pension",
+   "senior",
+   "elderly",
+   "widow",
+   "वृद्धावस्था",
+   "पेंशन",
+   "बुजुर्ग",
+   "ವೃದ್ಧಾಪ್ಯ",
+   "முதியோர்",
+   "వృద్ధాప్య",
+   "बुढ़ापे",
+   "वृद्ध",
+   "बुजुर्गों"
+  ]
+ }
+]
